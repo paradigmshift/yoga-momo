@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} | Ashtanga Yoga Momo</title>
+    <meta name="description" content={% block description %} {% endblock %}>
+    <link rel="stylesheet" type="text/css" href="/media/base.css">
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26680412-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+</script>
+    {% block scripts %} {% endblock %}
+  </head>
+  <body {% block extras %}{% endblock %}>
+    <div class="container">
+      {% block popup %}{% endblock %}
+      <div class="title">
+        <h1>Ashtanga Yoga</h1>
+        <hr/>
+        <h5>We teach Ashtanga Yoga according to the tradition and lineage of Sri K. Pattabhi Jois. We hope to pass on these teachings as we learned them from our teachers at the Krishna Pattabhi Jois Ashtanga Yoga Institute.</h5>
+        <hr/>
+      </div>
+      <div class="menubar">
+        <a href="/news/" id="news">NEWS</a>
+        <a href="/method/" id="method">METHOD</a>
+        <a href="/lineage/" id="lineage">LINEAGE</a>
+        <a href="/teachers/" id="teachers">TEACHERS</a>
+        <a href="/thai-massage/" id="massage">THAI MASSAGE</a>
+        <a href="/weblog/" id="articles">ARTICLES</a>
+        <a href="/contact/" id="contact">CONTACTS</a>
+      </div>
+      <div class="main-box">
+        <div class="text-area" id={% block id %}{% endblock %}>
+          <h1>{% block page-title %} {% endblock %}</h1>
+          {% block content %} {% endblock %}
+        </div>
+      </div>
+    </div>
+    <div class="signature">
+      <footer>
+        ॐ वन्दे गुरूणं चरणारविन्दे सन्दर्शित स्वात्म सुखाव बोधे । निः श्रेयसे जङ्गलिकायमाने संसार हालाहल मोहशांत्यै ॥ आबाहु पुरूषकारं शंखचक्रासि धारिणम् । सहस्र शिरशं श्वेतं प्रणमामि पतञ्जलिम् ॥ ॐ
+      </footer>
+    </div>
+  </body>
+</html>

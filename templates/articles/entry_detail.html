@@ -1,0 +1,40 @@
+{% extends "flatpages/base.html" %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
+{% endblock %}
+
+{% block popup %}
+  <div id="box">
+      {{ object.body|safe }}
+  </div>
+{% endblock %}
+    
+{% block title %}
+  {{ object.title }}
+{% endblock %}
+
+{% block description %}
+  "{{ object.body|striptags|truncatewords:"100"|safe }}"
+{% endblock %}
+
+{% block extras %}
+  class="articles"
+{% endblock %}
+
+{% block id %}
+  "entry-detail"
+{% endblock %}
+
+{% block page-title %}
+  <h3> {{ object.title }} </h3>
+  <h5> {{ object.author }} </h5>
+  <h5><a id="fullscreen" href="">Click here for full screen reading</a></h5>
+{% endblock %}
+
+{% block content %}
+  <div id="screen">
+  </div>
+  {{ object.body|safe }}
+{% endblock %}

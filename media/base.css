@@ -1,0 +1,151 @@
+body {
+#    background-image:url(/static/shala2.jpg);
+    background-image:url(/media/shala2.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:black;
+    padding:0px;
+    margin-top:10px;
+    margin-bottom:0px;
+}
+
+body.news a#news,
+body.method a#method,
+body.lineage a#lineage,
+body.teachers a#teachers,
+body.massage a#massage,
+body.articles a#articles,
+body.contact a#contact {
+    Background-color:#5A0408;
+    color:white;
+}
+
+div.container {
+    padding-top:5px;
+    width:800px;
+    min-height:700px;
+    margin-right:auto;
+    box-shadow: 5px 5px 5px black;
+    background-color:#5A0408;
+    opacity:0.85;
+    border-radius:10px;
+}
+
+div.main-box {
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+    border-radius:20px;
+    padding-bottom:20px;
+}
+
+#contact strong{
+    color:#fbb117;
+}
+
+div.text-area {
+    margin:10px;
+    font-family:Helvetica;
+    color:#ACB4AD;
+    text-align:justify;
+    padding-bottom:0.1em;
+}
+
+div#box {
+    left:50%;
+    margin-left:-350px;
+    display:none;
+    position:absolute;
+    width:700px;
+    z-index:20;
+    font-weight:500;
+    Background:white;
+    color:black;
+    border-radius:10px;
+    padding:1em;
+}
+
+div#screen {
+    position:fixed;
+    left:0;
+    top:0;
+    background:black;
+    z-index:10;
+    display:none;
+    height:100%;
+    width:100%;
+}
+
+div.signature {
+    padding-top:30px;
+    text-align:center;
+    color:#fbb117;
+}
+
+.signature footer {
+    font-size:large;
+}
+
+.text-area h1, h2 {
+    color:#EBE0B0;
+}
+
+.text-area h5 {
+    color:#eac117;
+}
+
+.text-area ul {
+    color:#eac117;
+    font-weight:800;
+}
+
+.text-area img {
+    box-shadow: 5px 5px 5px black;
+}
+
+.text-area a {
+    text-decoration:none;
+    color:white;
+    font-weight:800;
+}
+
+.text-area a:visited {color:white;}
+
+.text-area a:hover {color:#F5DA81;}
+
+div.title {
+    font-family:Helvetica;
+    text-align:center;
+    color:#F7DF74;
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+}
+
+div.menubar {
+    margin-left:auto;
+    margin-right:auto;
+    width:700px;
+    text-align:center;
+    font-family:Helvetica;
+    Background-color:#F7DF74;
+    border-radius:5px;
+}
+
+.menubar a {
+    text-decoration:none;
+    color:#AD402D;
+    font-weight:800;
+    display:inline;
+    padding:0.4em;
+}
+
+.menubar a:visited {color:#AD402D;}
+
+.menubar a:hover {
+    -webkit-transition:color 0.3s ease-in-out;
+    -mozkit-transition:color 0.3s ease-in-out;
+    color:white;
+}
+

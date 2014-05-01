@@ -1,0 +1,29 @@
+{% extends "flatpages/base.html" %}
+
+{% block title %}
+  Article Index
+{% endblock %}
+
+{% block description %}
+  "List of articles related to the practice and practitioners of Ashtanga Yoga"
+{% endblock %}
+
+{% block extras %}
+  class="articles"
+{% endblock %}
+
+{% block page-title %}
+  Article Index
+{% endblock %}
+
+{% block content %}
+  <h4> New articles every week (we try, we really do) from different students </h4>
+  {% if entry_list %}
+    {% for article in entry_list %}
+      <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+      <h5>Published on {{ article.pub_date|date:"F, j Y" }} by {{ article.author }}</h5>
+    {% endfor %}
+  {% else %}
+      There are no articles at the moment.
+  {% endif %}
+{% endblock %}

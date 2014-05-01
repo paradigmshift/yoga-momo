@@ -1,0 +1,62 @@
+{% extends "flatpages/base.html" %}
+
+{% block title %}
+  {{ flatpage.title }}
+{% endblock %}
+
+{% block description %}
+  "Contact details for suggestions and complaints and links of recommended teachers"
+{% endblock %}
+
+{% block extras %}
+  class="contact"
+{% endblock %}
+
+{% block page-title %}
+  {{ flatpage.title }}
+{% endblock %}
+
+{% block content %}
+  {{ error }}
+  <h3>Please feel free to contact us:</h3>
+  <div id="contact">
+<!--    <form enctype="multipart/form-data" method="post" action="http://www.response-o-matic.com/mail.php" accept-charset="UTF-8"> -->
+    <form method="post" action="/contact/"> {% csrf_token %}
+	  <table cellspacing="5" cellpadding="5" border="0">
+		<tr>
+		  <td valign="top">
+			<strong>Name:</strong>
+		  </td>
+		  <td valign="top">
+			<input type="text" name="name" id="name" size="40" value="" />
+			
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">
+			<strong>Email Address:</strong>
+		  </td>
+		  <td valign="top">
+			<input type="text" name="email" id="email" size="40" value="" />
+			
+		  </td>
+		</tr>
+		<tr>
+		  <td valign="top">
+			<strong>Message</strong>
+		  </td>
+		  <td valign="top">
+			<textarea name="message" id="message" rows="6" cols="40"></textarea>
+			
+		  </td>
+		</tr>
+		<tr>
+		  <td colspan="2" align="center">
+			<input type="submit" value=" Send Message " />
+		  </td>
+		</tr>
+	  </table>
+    </form>
+  </div>
+  {{ links.content|safe }}
+{% endblock %}
